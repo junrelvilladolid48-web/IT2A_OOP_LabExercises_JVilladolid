@@ -1,0 +1,41 @@
+classDiagram
+    class Transportation {
+      +move()
+      +stop()
+    }
+    class AirTransport {
+      +takeOff()
+      +land()
+    }
+    class LandTransport {
+      +drive()
+      +park()
+    }
+    class WaterTransport {
+      +sail()
+      +dock()
+    }
+    class Helicopter
+    class Airplane
+    class SpaceShuttle
+    class Truck
+    class SUV
+    class Tricycle
+    class Motorcycle
+    class Kariton
+    class Ship
+    class Submarine
+    
+    Transportation <|-- AirTransport
+    Transportation <|-- LandTransport
+    Transportation <|-- WaterTransport
+    AirTransport <|-- Helicopter
+    AirTransport <|-- Airplane
+    AirTransport <|-- SpaceShuttle
+    LandTransport <|-- Truck
+    LandTransport <|-- SUV
+    LandTransport <|-- Tricycle
+    LandTransport <|-- Motorcycle
+    LandTransport <|-- Kariton
+    WaterTransport <|-- Ship
+    WaterTransport <|-- Submarine
