@@ -1,0 +1,46 @@
+classDiagram
+    class User {
+      -String username
+      -String password
+      -String email
+      +login()
+      +logout()
+      +updateProfile()
+    }
+    class HealthData {
+      -Date date
+      +recordData()
+      +getData()
+    }
+    class HealthCheck {
+      -double temperature
+      -String symptoms
+      +checkTemperature()
+      +recordSymptoms()
+    }
+    class WellnessReminder {
+      -String reminderMessage
+      -Date time
+      +setReminder()
+      +getReminder()
+    }
+    class ExerciseReminder {
+      -String exerciseType
+      +setExerciseReminder()
+    }
+    class HydrationReminder {
+      -double waterIntake
+      +setHydrationReminder()
+    }
+    class MedicationReminder {
+      -String medicationName
+      -int dosage
+      +setMedicationReminder()
+    }
+    
+    User "1" *-- "1..*" HealthData
+    HealthData <|-- HealthCheck
+    HealthData <|-- WellnessReminder
+    WellnessReminder <|-- ExerciseReminder
+    WellnessReminder <|-- HydrationReminder
+    WellnessReminder <|-- MedicationReminder
